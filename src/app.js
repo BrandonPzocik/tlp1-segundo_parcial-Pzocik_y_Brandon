@@ -21,6 +21,7 @@ app.post("/books", (req, res) => {
     const nuevoBook = bd.push( {id:id, titulo:titulo, autor:autor, año:año})
     res.json({mensaje:"book creado con exito"})
 })
+//actualizar un book 
 app.put("/books/:id", (req, res) => {
     const id = parseInt(req.params.id)
     const {titulo, autor, año} = req.body
